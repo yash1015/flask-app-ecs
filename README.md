@@ -18,15 +18,14 @@ It demonstrates a real-world **DevOps workflow** including **Docker image buildi
 
 ## 📁 Project Structure
 
-app.py → Main Flask application
-run.py → Application entry point
-requirements.txt → Python dependencies
-Dockerfile → Docker build file
-Dockerfile-multi → Multi-stage Docker file
-README.md → Project documentation
-
-yaml
-Copy code
+```
+app.py               → Main Flask application  
+run.py               → Application entry point  
+requirements.txt     → Python dependencies  
+Dockerfile           → Docker build file  
+Dockerfile-multi     → Multi-stage Docker file  
+README.md            → Project documentation  
+```
 
 ---
 
@@ -55,61 +54,100 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
 newgrp docker
-📥 Step 2: Clone the GitHub Repository
-bash
-Copy code
+```
+
+---
+
+## 📥 Step 2: Clone the GitHub Repository
+
+```bash
 git clone <YOUR_GITHUB_REPO_URL>
 cd <YOUR_PROJECT_FOLDER>
-🧱 Step 3: Build Docker Image
+```
+
+---
+
+## 🧱 Step 3: Build Docker Image
+
 Using the default Dockerfile:
 
-bash
-Copy code
+```bash
 docker build -t flask-app .
+```
+
 Using the multi-stage Dockerfile:
 
-bash
-Copy code
+```bash
 docker build -f Dockerfile-multi -t flask-app .
-🚀 Step 4: Run Docker Container
-bash
-Copy code
+```
+
+---
+
+## 🚀 Step 4: Run Docker Container
+
+```bash
 docker run -d -p 80:5000 --name flask-container flask-app
+```
+
 🌍 Open in browser:
 
-cpp
-Copy code
+```
 http://<EC2-PUBLIC-IP>
-✅ Step 5: Check Running Container
-bash
-Copy code
+```
+
+---
+
+## ✅ Step 5: Check Running Container
+
+```bash
 docker ps
-📜 Step 6: View Application Logs
-bash
-Copy code
+```
+
+---
+
+## 📜 Step 6: View Application Logs
+
+```bash
 docker logs -f flask-container
-🔄 Step 7: Container Management
-bash
-Copy code
+```
+
+---
+
+## 🔄 Step 7: Container Management
+
+```bash
 docker stop flask-container
 docker start flask-container
 docker rm flask-container
-🗑️ Step 8: Remove Docker Image (Optional)
-bash
-Copy code
+```
+
+---
+
+## 🗑️ Step 8: Remove Docker Image (Optional)
+
+```bash
 docker rmi flask-app
-✅ Final Output
-Your Flask application is now successfully running on AWS EC2 using Docker ☁️🐳
+```
+
+---
+
+## ✅ Final Output
+
+Your Flask application is now **successfully running on AWS EC2 using Docker** ☁️🐳  
 This project proves your knowledge of:
 
-✔️ Docker Image Creation
+- ✔️ Docker Image Creation  
+- ✔️ Docker Container Management  
+- ✔️ AWS EC2 Deployment  
+- ✔️ Basic DevOps Workflow  
 
-✔️ Docker Container Management
+---
 
-✔️ AWS EC2 Deployment
+## 🙌 Author
 
-✔️ Basic DevOps Workflow
+**Developed by:** Vedant Tambe  
+**Role:** DevOps Enthusiast  
 
-🙌 Author
-Developed by: Your Name
-Role: Python Developer | DevOps Enthusiast
+---
+
+⭐ If you like this project, don’t forget to give it a **star** on GitHub!
